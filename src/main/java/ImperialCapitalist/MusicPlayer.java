@@ -1,4 +1,7 @@
+package ImperialCapitalist;
+
 import java.io.IOException;
+import java.net.URL;
 
 import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
@@ -46,7 +49,7 @@ public class MusicPlayer {
 		clip = AudioSystem.getClip();
 
 		// get song as audio input stream
-		java.net.URL url = this.getClass().getResource(songFile[songIndex]);
+		URL url = this.getClass().getResource("/music/"+songFile[songIndex]);
 		songs = AudioSystem.getAudioInputStream(url);
 
 		// Open audio clip and load samples from the audio input stream.

@@ -1,0 +1,31 @@
+plugins {
+    id 'java'
+}
+
+compileJava {
+    sourceCompatibility = 11
+    targetCompatibility = 11
+}
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'ImperialCapitalist.InitialCode'
+    }
+    archiveBaseName = 'ImperialCapitalist'
+}
+
+sourceSets {
+    main {
+        java {
+            srcDirs = ['src/main/java']
+        }
+        resources {
+            srcDirs = ['src/main/resources']
+        }
+    }
+}
+
+task echo;
+echo.doFirst {
+    println "To run the program from jar:\njava -jar build/libs/ImperialCapitalist.jar"
+}

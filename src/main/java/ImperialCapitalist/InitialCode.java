@@ -1,3 +1,5 @@
+package ImperialCapitalist;
+
 import java.awt.EventQueue;
 import java.io.IOException;
 import javax.sound.sampled.LineUnavailableException;
